@@ -1,0 +1,13 @@
+{
+    "require": {
+        "php": ">=7.4" 
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "php -r \"copy('public/.htaccess', '.htaccess');\""
+        ],
+        "post-update-cmd": [
+            "php -r \"copy('public/.htaccess', '.htaccess');\""
+        ]
+    }
+}
