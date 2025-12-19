@@ -8,9 +8,8 @@ RUN apt-get update && apt-get install -y \
     libjpeg-dev \
     libonig-dev \
     libfreetype6-dev \
-    libonig-dev \
     libxml2-dev \
-    mysql-client \
+    mariadb-client \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) pdo_mysql gd zip opcache \
     && a2enmod rewrite \
@@ -28,4 +27,5 @@ RUN chown -R www-data:www-data /var/www/html/
 COPY public/.htaccess /var/www/html/.htaccess
 
 # Порт, который Render будет использовать (должен совпадать с переменной $PORT)
+
 EXPOSE 80
