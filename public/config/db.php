@@ -1,10 +1,10 @@
 <?php
 // config/db.php
 
-$host = 'localhost'; // Или хост, предоставленный Render
-$db   = 'your_database_name'; // Замените на имя вашей БД
-$user = 'your_db_user';       // Замените на ваше имя пользователя БД
-$pass = 'your_db_password';   // Замените на ваш пароль БД
+$host = 'dpg-d52kkc63jp1c73c60vr0-a'; // Или хост, предоставленный Render
+$db   = 'site_db_4gf5'; // Замените на имя вашей БД
+$user = 'test_user';       // Замените на ваше имя пользователя БД
+$pass = 'A5JJD5ItrTZLGF0uBkq96BaNiXBi0jXN';   // Замените на ваш пароль БД
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
@@ -35,4 +35,5 @@ function check_role($role_needed) {
     }
     return $_SESSION['role'] === $role_needed;
 }
+
 ?>
