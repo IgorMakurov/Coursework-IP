@@ -15,6 +15,8 @@ RUN apt-get update && apt-get install -y \
     && a2enmod rewrite \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
+COPY docker/apache/000-default.conf /etc/apache2/sites-available/000-default.conf
+
 # Копируем все файлы проекта
 # Контекст сборки (BUILD CONTEXT) должен быть корнем проекта (survey-app)
 COPY . /var/www/html/
@@ -29,3 +31,4 @@ COPY public/.htaccess /var/www/html/.htaccess
 # Порт, который Render будет использовать (должен совпадать с переменной $PORT)
 
 EXPOSE 80
+
