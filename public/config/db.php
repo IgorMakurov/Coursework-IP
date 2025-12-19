@@ -15,6 +15,7 @@ $options = [
 ];
 
 try {
+    $dsn = "pgsql:host=$host;port=$port;dbname=$dbname";
     $pdo = new PDO($dsn, $user, $pass, $options);
 } catch (\PDOException $e) {
     // В реальном приложении не выводить ошибку напрямую, а логировать
@@ -37,4 +38,5 @@ function check_role($role_needed) {
 }
 
 ?>
+
 
