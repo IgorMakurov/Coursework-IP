@@ -1,7 +1,7 @@
 <?php
 // config/db.php
 
-$host = 'dpg-d52kkc63jp1c73c60vr0-a'; // Или хост, предоставленный Render
+$host = 'localhost'; // Или хост, предоставленный Render
 $db   = 'site_db_4gf5'; // Замените на имя вашей БД
 $user = 'test_user';       // Замените на ваше имя пользователя БД
 $pass = 'A5JJD5ItrTZLGF0uBkq96BaNiXBi0jXN';   // Замените на ваш пароль БД
@@ -37,3 +37,4 @@ function check_role($role_needed) {
 }
 
 ?>
+
