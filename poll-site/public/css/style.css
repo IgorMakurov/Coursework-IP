@@ -1,0 +1,214 @@
+/* --- Глобальные настройки и Фон --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Более современный шрифт */
+    margin: 0;
+    padding: 0;
+    background-color: #e9ecef; /* Светло-серый фон */
+    color: #343a40; /* Темный текст */
+}
+
+/* --- Заголовок и Навигация (Header) --- */
+header {
+    background-color: #0056b3; /* Более глубокий синий */
+    color: white;
+    padding: 1em 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+header h1 a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+header a {
+    color: #b0c4de; /* Светлее для ссылок в навигации */
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.2s;
+}
+header a:hover {
+    color: white;
+}
+
+/* --- Основной Контейнер --- */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px; /* Более скругленные углы */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* Мягкая тень */
+}
+
+/* --- Формы и Элементы Управления --- */
+input[type="text"], input[type="email"], input[type="password"], textarea {
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+input:focus, textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+button, input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #28a745; /* Зеленый для подтверждения */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-weight: 500;
+}
+button:hover, input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* --- Карточки Опросов (polls.php) --- */
+.poll-card {
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    background-color: #ffffff;
+}
+.poll-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+}
+.poll-card h3 {
+    color: #007bff;
+    margin-top: 0;
+}
+
+/* --- Стили для Динамических Полей (create_poll.php) --- */
+.option-group {
+    margin-bottom: 12px; /* Увеличенное расстояние между вариантами */
+    display: flex;
+    gap: 15px; /* Увеличенный промежуток */
+    align-items: center;
+}
+.option-group input[type="text"] {
+    flex-grow: 1;
+    padding: 10px; /* Увеличим внутренний отступ полей */
+}
+.remove-option-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 12px; /* Сделаем кнопку чуть больше */
+    border-radius: 5px;
+    cursor: pointer;
+    flex-shrink: 0; /* Чтобы кнопка не сжималась */
+}
+.remove-option-btn:hover {
+    background-color: #c82333;
+}
+
+#add-option-btn {
+    margin-top: 25px; /* Это наш новый увеличенный отступ */
+    background-color: #17a2b8; /* Акцентный голубой для добавления */
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-weight: 500;
+}
+#add-option-btn:hover {
+    background-color: #138496;
+}
+
+/* --- Панель Администратора --- */
+.admin-action button {
+    background-color: #dc3545;
+    padding: 8px 15px;
+}
+.admin-action button:hover {
+    background-color: #c82333;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+table th, table td {
+    border: 1px solid #dee2e6;
+    padding: 10px;
+    text-align: left;
+}
+table thead tr {
+    background-color: #f8f9fa;
+}
+
+.action-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s, opacity 0.2s;
+    text-align: center;
+    white-space: nowrap; /* Чтобы текст не переносился */
+}
+
+/* Стиль для основного действия (Голосование) */
+.btn-primary {
+    background-color: #007bff; /* Синий */
+    color: white;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Стиль для просмотра результатов (Информационный) */
+.btn-secondary {
+    background-color: #6c757d; /* Серый */
+    color: white;
+}
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Стиль для административных действий (Предупреждение) */
+.btn-admin {
+    background-color: #ffc107; /* Желтый/Оранжевый */
+    color: #343a40;
+}
+.btn-admin:hover {
+    background-color: #e0a800;
+}
+
+.btn-danger-action {
+    background-color: #dc3545; /* Ярко-красный */
+    color: white;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.btn-danger-action:hover {
+    background-color: #c82333;
+}
+
+.btn-success-action {
+    background-color: #28a745; /* Зеленый */
+    color: white;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.btn-success-action:hover {
+    background-color: #218838;
+}
